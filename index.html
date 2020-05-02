@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Light on off</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<h1 id="bulbdata">Lights on off</h1>
+	<main class="lightapp">
+		<figure class="lightstyle">
+			<img src="bulb-off.jpg" id="lightid1">
+			<figcaption>
+				<p>Light ON OFF</p>
+			</figcaption>
+		</figure>
+
+		<figure class="lightstyle">
+			<img src="bulb-off.jpg" id="lightid2">
+			<figcaption>
+				<p>Light ON OFF</p>
+			</figcaption>
+		</figure>
+
+		<figure class="lightstyle">
+			<img src="bulb-off.jpg" id="lightid3">
+			<figcaption>
+				<p>Light ON OFF</p>
+			</figcaption>
+		</figure>
+
+		<figure class="lightstyle">
+			<img src="bulb-off.jpg" id="lightid4">
+			<figcaption>
+				<p>Light ON OFF</p>
+			</figcaption>
+		</figure>
+
+		<figure class="lightstyle">
+			<img src="bulb-off.jpg" id="lightid5">
+			<figcaption>
+				<p>Light ON OFF</p>
+			</figcaption>
+		</figure>
+
+		<figure class="lightstyle">
+			<img src="bulb-off.jpg" id="lightid6">
+			<figcaption>
+				<p>Light ON OFF</p>
+			</figcaption>
+		</figure>
+		
+	</main>
+
+	<div class="onoffbtn">
+		<label class="switch">
+			<input type="checkbox"> <span class="slider" onclick="tubelight()">
+				
+			</span>
+			
+		</label>
+		
+	</div>
+
+	<script>
+		const tubelight = () =>{
+			let btext=document.getElementById('bulbdata');
+			for(x=1; x<7; x++){
+
+			let bid =document.getElementById('lightid'.concat(x));
+			
+			if(bid.src.match('bulbon')){
+				bid.src="bulb-off.jpg";
+				btext.innerHTML = "LIGHT OFF";
+				btext.style.color = "green";
+			}else{
+				bid.src="bulbon.jpg";
+				btext.innerHTML = "LIGHT ON";
+				btext.style.color = "red";
+			}
+			}
+			
+		}
+	</script>
+
+</body>
+</html>
